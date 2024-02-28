@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paavo Kekkonen Photography</title>
+    <link rel="icon" type="image/x-icon" href="./images/pk_logo.png">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <script>
+      function navMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        const burger = document.querySelector(".hamburger")
+        burger.classList.toggle("change");
+        if (navMenu.style.display === "block") {
+          navMenu.style.display = "none";
+        } else {
+          navMenu.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav>
+        <div class="navmenu">
+          <ul class="nav-menu">
+            <li><a href="./index.html"><h2>Home</h2></a></li>
+            <li><a href="./portfolio.html"><h2>Portfolio</h2></a></li>
+            <li><a href="./contact.html"><h2>Contact</h2></a></li>
+            <li><a href="./about.html"><h2>About</h2></a></li>
+          </ul>
+        </div>
+        <div class="navbar">
+          <div class="nav-name">
+            <h1><a href="./index.html" class="nav-name-mobile">Paavo Kekkonen</a></h1>
+          </div>
+          <div class="socialmedia-icons">
+            <a href="./index.html"><img src="./images/instagram.png" alt="instagram icon"></a>
+            <a href="https://www.linkedin.com/in/paavo-kekkonen/"><img src="./images/linkedin.png" alt="linkedin icon"></a>
+          </div>
+          <div class="nav-center">
+            <h1>Paavo Kekkonen</h1>
+            <a href="./index.html"><img src="./images/pk_logo.png" class="logo" alt="logo"></a>
+            <h1>Photography</h1>
+          </div>
+          <div class="menu-nav">
+            <button class="menu-button" onclick="navMenu()">Menu</button>
+            <div class="hamburger" onclick="navMenu()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <container>
+      <section class="portfolio-gallery">
+          <article class="portfolio-nav">
+              <a href="./concerts.html">
+              <img src="./images/c5.jpg" alt="Concerts & performances" id="portfolio1" class="portfolio-gallery-image">
+              <h1>Concerts & Performances</h1>
+              </a>
+          </article>
+          <article class="portfolio-nav">
+              <img src="./images/e4.jpg" alt="Concerts & performances" id="portfolio2" class="portfolio-gallery-image">
+              <h1>Parties & Other Events</h1>
+          </article>
+          <article class="portfolio-nav">
+              <img src="./images/p9.jpg" alt="Concerts & performances" id="portfolio3" class="portfolio-gallery-image">
+              <h1>Portraits</h1>
+          </article>
+      </section>
+    </container>
+    <footer id="footer" class="footer">
+      <h3>Created & designed by Paavo Kekkonen © 2024 - all rights reserved.</h3>
+    </footer>
+  </body>
+</html>

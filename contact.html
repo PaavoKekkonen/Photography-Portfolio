@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paavo Kekkonen Photography</title>
+    <link rel="icon" type="image/x-icon" href="./images/pk_logo.png">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <script>
+      function navMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        const burger = document.querySelector(".hamburger")
+        burger.classList.toggle("change");
+        if (navMenu.style.display === "block") {
+          navMenu.style.display = "none";
+        } else {
+          navMenu.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav>
+        <div class="navmenu">
+          <ul class="nav-menu">
+            <li><a href="./index.html"><h2>Home</h2></a></li>
+            <li><a href="./portfolio.html"><h2>Portfolio</h2></a></li>
+            <li><a href="./contact.html"><h2>Contact</h2></a></li>
+            <li><a href="./about.html"><h2>About</h2></a></li>
+          </ul>
+        </div>
+        <div class="navbar">
+          <div class="nav-name">
+            <h1><a href="./index.html" class="nav-name-mobile">Paavo Kekkonen</a></h1>
+          </div>
+          <div class="socialmedia-icons">
+            <a href="./index.html"><img src="./images/instagram.png" alt="instagram icon"></a>
+            <a href="https://www.linkedin.com/in/paavo-kekkonen/"><img src="./images/linkedin.png" alt="linkedin icon"></a>
+          </div>
+          <div class="nav-center">
+            <h1>Paavo Kekkonen</h1>
+            <a href="./index.html"><img src="./images/pk_logo.png" class="logo" alt="logo"></a>
+            <h1>Photography</h1>
+          </div>
+          <div class="menu-nav">
+            <button class="menu-button" onclick="navMenu()">Menu</button>
+            <div class="hamburger" onclick="navMenu()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <container>
+      <section class="contact">
+          <h1>Contact</h1>
+          <div class="contact-form">
+            <form action="action_page.php">
+          
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name...">
+
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email address...">
+          
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write something..."></textarea>
+          
+              <h2><input type="submit" value="Send enquiry" class="submitbutton"></h2>
+          
+            </form>
+          </div>
+      </section>
+    </container>
+    <footer id="footer" class="footer">
+      <h3>Created & designed by Paavo Kekkonen © 2024 - all rights reserved.</h3>
+    </footer>
+  </body>
+</html>

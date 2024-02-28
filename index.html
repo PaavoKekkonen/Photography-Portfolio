@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paavo Kekkonen Photography</title>
+    <link rel="icon" type="image/x-icon" href="./images/pk_logo.png">
+    <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
+    <script>
+      function navMenu() {
+        const navMenu = document.querySelector(".nav-menu");
+        const burger = document.querySelector(".hamburger")
+        burger.classList.toggle("change");
+        if (navMenu.style.display === "block") {
+          navMenu.style.display = "none";
+        } else {
+          navMenu.style.display = "block";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav>
+        <div class="navmenu">
+          <ul class="nav-menu">
+            <li><a href="./index.html"><h2>Home</h2></a></li>
+            <li><a href="./portfolio.html"><h2>Portfolio</h2></a></li>
+            <li><a href="./contact.html"><h2>Contact</h2></a></li>
+            <li><a href="./about.html"><h2>About</h2></a></li>
+          </ul>
+        </div>
+        <div class="navbar">
+          <div class="nav-name">
+            <h1><a href="./index.html" class="nav-name-mobile">Paavo Kekkonen</a></h1>
+          </div>
+          <div class="socialmedia-icons">
+            <a href="./index.html"><img src="./images/instagram.png" alt="instagram icon"></a>
+            <a href="https://www.linkedin.com/in/paavo-kekkonen/"><img src="./images/linkedin.png" alt="linkedin icon"></a>
+          </div>
+          <div class="nav-center">
+            <h1>Paavo Kekkonen</h1>
+            <a href="./index.html"><img src="./images/pk_logo.png" class="logo" alt="logo"></a>
+            <h1>Photography</h1>
+          </div>
+          <div class="menu-nav">
+            <button class="menu-button" onclick="navMenu()">Menu</button>
+            <div class="hamburger" onclick="navMenu()">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="herobanner">
+      <img src="./images/heroshot.png" alt="hero photo" class="hero-image">
+      <img src="./images/pk_logo.png" alt="logo" class="hero-logo">
+      <img src="./images/Explore.png" alt="additional navigation graphic" class="hero-explore">
+    </section>
+    <section class="image-gallery">
+      <article>
+        <h1>Concerts & Performances</h1>
+        <div class="gallery">
+          <img src="./images/c1.jpg" alt="concert or performance photo 1" class="gallery-item-image">
+          <img src="./images/c2.jpg" alt="concert or performance photo 2" class="gallery-item-image">
+          <img src="./images/c3.jpg" alt="concert or performance photo 3" class="gallery-item-image">
+          <img src="./images/c4.jpg" alt="concert or performance photo 4" class="gallery-item-image">
+          <img src="./images/c5.jpg" alt="concert or performance photo 5" class="gallery-item-image">
+          <img src="./images/c6.jpg" alt="concert or performance photo 6" class="gallery-item-image">
+        </div>
+      </article>
+      <article>
+        <h1>Parties & Other Events</h1>
+        <div class="gallery">
+          <img src="./images/e1.jpg" alt="party or event photo 1" class="gallery-item-image">
+          <img src="./images/e2.jpg" alt="party or event photo 2" class="gallery-item-image">
+          <img src="./images/e3.jpg" alt="party or event photo 3" class="gallery-item-image">
+          <img src="./images/e4.jpg" alt="party or event photo 4" class="gallery-item-image">
+          <img src="./images/e5.jpg" alt="party or event photo 5" class="gallery-item-image">
+          <img src="./images/e6.jpg" alt="party or event photo 6" class="gallery-item-image">
+          <img src="./images/e7.jpg" alt="party or event photo 7" class="gallery-item-image">
+          <img src="./images/e8.jpg" alt="party or event photo 8" class="gallery-item-image">
+        </div>
+      </article>
+      <article>
+        <h1>Portraits</h1>
+        <div class="gallery">
+          <img src="./images/p1.jpg" alt="portrait photo 1" class="gallery-item-image">
+          <img src="./images/p2.jpg" alt="portrait photo 2" class="gallery-item-image">
+          <img src="./images/p3.jpg" alt="portrait photo 3" class="gallery-item-image">
+          <img src="./images/p4.jpg" alt="portrait photo 4" class="gallery-item-image">
+          <img src="./images/p5.jpg" alt="portrait photo 5" class="gallery-item-image">
+          <img src="./images/p6.jpg" alt="portrait photo 6" class="gallery-item-image">
+          <img src="./images/p7.jpg" alt="portrait photo 7" class="gallery-item-image">
+          <img src="./images/p8.jpg" alt="portrait photo 8" class="gallery-item-image">
+        </div>
+      </article>
+    </section>
+    <footer id="footer" class="footer">
+      <h3>Created & designed by Paavo Kekkonen © 2024 - all rights reserved.</h3>
+    </footer>
+  </body>
+</html>
