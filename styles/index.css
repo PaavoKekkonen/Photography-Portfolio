@@ -412,7 +412,7 @@ input[type=text], select, textarea {
   display: none;
   position: fixed;
   z-index: 10;
-  padding-top: 4vh;
+  padding-top: 3vh;
   left: 0;
   top: 0;
   width: 100%;
@@ -641,8 +641,8 @@ input[type=text], select, textarea {
   }
 
   #full-screen-image {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 60%;
+    max-height: 60%;
   }
 
 }
