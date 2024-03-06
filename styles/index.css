@@ -99,6 +99,7 @@ container h1 {
   color: #f9f9f9;
   text-transform: uppercase;
   padding: 10px;
+  cursor: pointer;
 }
 
 .navmenu {
@@ -407,6 +408,147 @@ input[type=text], select, textarea {
   height: 200px;
 }
 
+#img-viewer {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  padding-top: 4vh;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(34, 34, 34, 0.9);
+}
+
+#full-screen-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  object-fit: contain;
+  height: 100%;
+  max-width: 80%;
+  max-height: 80%;
+  transform: translate(-50%, -50%);
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+  }
+  to {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+#close-image-button {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#close-image-button:hover {
+  color: #d0d0d0;
+}
+
+.img-list {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  gap: 20px;
+}
+
+.gallery-item-image {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.gallery-item-image:hover {
+  transform: scale(1.05);
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(2px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  top: 40%;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #1f1f1f;
+  border-radius: 5px;
+  border: 1px solid #f9f9f9;
+  display: none;
+  text-align: center;
+}
+
+.modal-close {
+  position: absolute;
+  padding: 0;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.button-line {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background: #d0d0d0;
+  transition: all 0.1s;
+}
+
+.button-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.button-line:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover .button-line {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 900px) {
+  .modal-buttons {
+      flex-direction: column;
+  }
+  .modal {
+      padding: 30px;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -459,6 +601,11 @@ input[type=text], select, textarea {
   .gallery-bigger img {
     max-width: 100%;
     height: 100%;
+  }
+
+  #full-screen-image {
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 
