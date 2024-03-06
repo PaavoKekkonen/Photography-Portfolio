@@ -8,18 +8,6 @@
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-    <script>
-      function navMenu() {
-        const navMenu = document.querySelector(".nav-menu");
-        const burger = document.querySelector(".hamburger")
-        burger.classList.toggle("change");
-        if (navMenu.style.display === "block") {
-          navMenu.style.display = "none";
-        } else {
-          navMenu.style.display = "block";
-        }
-      }
-    </script>
   </head>
   <body>
     <header id="header" class="header">
@@ -46,8 +34,8 @@
             <h1>Photography</h1>
           </div>
           <div class="menu-nav">
-            <button class="menu-button" onclick="navMenu()">Menu</button>
-            <div class="hamburger" onclick="navMenu()">
+            <button class="menu-button">Menu</button>
+            <div class="hamburger">
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
@@ -57,28 +45,41 @@
       </nav>
     </header>
     <container>
+      <div class="modal-container" id="modal-container" style="display:none">
+        <div class="modal" data-modal="1" style="display: none;">
+          <h2>Implementation missing</h2>
+          <p>
+              Sorry about that. Feel free to contact me directly at paavo.kekkonen@aalto.fi.
+          </p>
+          <button class="modal-close">
+              <div class="button-line"></div>
+              <div class="button-line"></div>
+          </button>
+        </div>
+      </div>
       <section class="contact">
-          <h1>Contact</h1>
-          <div class="contact-form">
-            <form action="action_page.php">
-          
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Your name...">
+        <h1>Contact</h1>
+        <div class="contact-form">
+          <form action="">
+        
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name...">
 
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" placeholder="Your email address...">
-          
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write something..."></textarea>
-          
-              <h2><input type="submit" value="Send enquiry" class="submitbutton"></h2>
-          
-            </form>
-          </div>
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" placeholder="Your email address...">
+        
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write something..."></textarea>
+        
+          </form>
+          <h2><input type="submit" value="Send enquiry" class="submitbutton" data-modal="1"></h2>
+        </div>
       </section>
     </container>
     <footer id="footer" class="footer">
       <h3>Created & designed by Paavo Kekkonen © 2024 - all rights reserved.</h3>
     </footer>
+    <script defer src="./scripts/navMenu.js"></script>
+    <script defer src="./scripts/modal.js"></script>
   </body>
 </html>

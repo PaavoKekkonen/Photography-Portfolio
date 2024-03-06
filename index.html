@@ -8,18 +8,6 @@
     <link rel="stylesheet" href="styles/index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans">
-    <script>
-      function navMenu() {
-        const navMenu = document.querySelector(".nav-menu");
-        const burger = document.querySelector(".hamburger")
-        burger.classList.toggle("change");
-        if (navMenu.style.display === "block") {
-          navMenu.style.display = "none";
-        } else {
-          navMenu.style.display = "block";
-        }
-      }
-    </script>
   </head>
   <body>
     <header id="header" class="header">
@@ -46,8 +34,8 @@
             <h1>Photography</h1>
           </div>
           <div class="menu-nav">
-            <button class="menu-button" onclick="navMenu()">Menu</button>
-            <div class="hamburger" onclick="navMenu()">
+            <button class="menu-button">Menu</button>
+            <div class="hamburger">
               <div class="bar1"></div>
               <div class="bar2"></div>
               <div class="bar3"></div>
@@ -62,6 +50,10 @@
       <img src="./images/Explore.png" alt="additional navigation graphic" class="hero-explore">
     </section>
     <section class="image-gallery">
+      <div id="img-viewer" style="display: none;">
+        <button id="close-image-button">×</button>
+        <img id="full-screen-image">
+      </div>
       <article>
         <h1>Concerts & Performances</h1>
         <div class="gallery">
@@ -103,5 +95,7 @@
     <footer id="footer" class="footer">
       <h3>Created & designed by Paavo Kekkonen © 2024 - all rights reserved.</h3>
     </footer>
+    <script defer src="./scripts/fullScreen.js"></script>
+    <script defer src="./scripts/navMenu.js"></script>
   </body>
 </html>
