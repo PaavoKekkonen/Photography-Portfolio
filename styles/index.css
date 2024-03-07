@@ -581,6 +581,10 @@ input[type=text], select, textarea {
     display: none;
   }
 
+  .menu-button {
+    display: none;
+  }
+
   .hero-logo {
     top: 30%;
     width: 30vw;
