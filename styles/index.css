@@ -578,10 +578,6 @@ input[type=text], select, textarea {
     display: none;
   }
 
-  .socialmedia-icons {
-    max-width: 100vw;
-  }
-
   .menu-button {
     display: none;
   }
